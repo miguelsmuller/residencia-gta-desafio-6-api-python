@@ -1,0 +1,42 @@
+@baseUrl = http://localhost:5000
+
+
+### GET FILMS ###
+GET {{baseUrl}}/films HTTP/1.1
+
+
+### CREATE FILM ###
+POST {{baseUrl}}/films HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Django Livre",
+    "synopsis": "Django (Jamie Foxx) é um escravo liberto cujo passado brutal com seus antigos proprietários leva-o ao encontro do caçador de recompensas alemão Dr. King Schultz (Christoph Waltz). Schultz está em busca dos irmãos assassinos Brittle, e somente Django pode levá-lo a eles. O pouco ortodoxo Schultz compra Django com a promessa de libertá-lo quando tiver capturado os irmãos Brittle, vivos ou mortos.",
+    "rate": 5.0, 
+    "year": 2013,
+    "genre": "Ação"
+}
+
+
+### GET FILM BY ID  ###
+GET {{baseUrl}}/films/1648517125762 HTTP/1.1
+
+
+### UPDATE FILMS ###
+PUT {{baseUrl}}/films/1648517125762 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Django Framework - O Encontro dos que não foram",
+    "synopsis": "dgdfgdfgdfgd",
+    "rate": 5.0, 
+    "year": 2013,
+    "genre": "Ação"
+}
+
+### DELETE FILMS ###
+DELETE {{baseUrl}}/films/1648517125762 HTTP/1.1
+
+
+
+

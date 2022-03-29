@@ -1,0 +1,52 @@
+@baseUrl = http://localhost:5000
+
+### CREATE SERIE ###
+POST {{baseUrl}}/series HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Euphoria",
+    "synopsis": "Em Euphoria, Rue Bennett (Zendaya) é uma jovem de 17 anos que acaba de sair da clínica de reabilitação após ter uma overdose. Rue sofre com transtornos mentais desde criança, o que a fez entrar em contato com drogas ainda no início da adolescência. Ela tenta agora se adaptar a uma vida "limpa" e volta a frequentar a escola. Mas, assim como ela, os demais alunos do ensino médio enfrentam seus próprios desafios, envolvendo sexo, drogas, amizades, relacionamentos amorosos, conflitos familiares, redes sociais e violência. À medida que luta contra a dependência química, Rue precisa lidar com todos os traumas e segredos da adolescência. Ela encontra apoio em uma nova amiga, Jules (Hunter Schafer), uma adolescente transgênero que acabou de se mudar para a cidade com o pai. A princípio, Jules tem suas próprias questões para lidar, porém, aos poucos, essa amizade vai se transformando em um intenso interesse amoroso.",
+    "rate": 3.1,
+    "genre": "Drama"
+    "number_seasons": 2,
+    "episodes": [
+      {
+        "title": "Pilot",
+        "synopsis": "Em Euphoria, Rue Bennett (Zendaya) é uma jovem de 17 anos que acaba de sair da clínica de reabilitação após ter uma overdose. Rue sofre com transtornos mentais desde criança, o que a fez entrar em contato com drogas ainda no início da adolescência. Ela tenta agora se adaptar a uma vida "limpa" e volta a frequentar a escola. Mas, assim como ela, os demais alunos do ensino médio enfrentam seus próprios desafios, envolvendo sexo, drogas, amizades, relacionamentos amorosos, conflitos familiares, redes sociais e violência. À medida que luta contra a dependência química, Rue precisa lidar com todos os traumas e segredos da adolescência. Ela encontra apoio em uma nova amiga, Jules (Hunter Schafer), uma adolescente transgênero que acabou de se mudar para a cidade com o pai. A princípio, Jules tem suas próprias questões para lidar, porém, aos poucos, essa amizade vai se transformando em um intenso interesse amoroso.",
+        "season": 1,
+        "episode_number": 1
+      }
+    ]
+}
+
+### GET SERIES ###
+
+GET {{baseUrl}}/series HTTP/1.1
+
+
+### UPDATE SERIES ###
+
+PUT {{baseUrl}}/films/1 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Euphoria Alterado",
+    "synopsis": "Em Euphoria, Rue Bennett (Zendaya) é uma jovem de 17 anos que acaba de sair da clínica de reabilitação após ter uma overdose. Rue sofre com transtornos mentais desde criança, o que a fez entrar em contato com drogas ainda no início da adolescência. Ela tenta agora se adaptar a uma vida "limpa" e volta a frequentar a escola. Mas, assim como ela, os demais alunos do ensino médio enfrentam seus próprios desafios, envolvendo sexo, drogas, amizades, relacionamentos amorosos, conflitos familiares, redes sociais e violência. À medida que luta contra a dependência química, Rue precisa lidar com todos os traumas e segredos da adolescência. Ela encontra apoio em uma nova amiga, Jules (Hunter Schafer), uma adolescente transgênero que acabou de se mudar para a cidade com o pai. A princípio, Jules tem suas próprias questões para lidar, porém, aos poucos, essa amizade vai se transformando em um intenso interesse amoroso.",
+    "rate": 3.1,
+    "genre": "Drama"
+    "number_seasons": 2,
+    "episodes": [
+      {
+        "title": "Pilot",
+        "synopsis": "Em Euphoria, Rue Bennett (Zendaya) é uma jovem de 17 anos que acaba de sair da clínica de reabilitação após ter uma overdose. Rue sofre com transtornos mentais desde criança, o que a fez entrar em contato com drogas ainda no início da adolescência. Ela tenta agora se adaptar a uma vida "limpa" e volta a frequentar a escola. Mas, assim como ela, os demais alunos do ensino médio enfrentam seus próprios desafios, envolvendo sexo, drogas, amizades, relacionamentos amorosos, conflitos familiares, redes sociais e violência. À medida que luta contra a dependência química, Rue precisa lidar com todos os traumas e segredos da adolescência. Ela encontra apoio em uma nova amiga, Jules (Hunter Schafer), uma adolescente transgênero que acabou de se mudar para a cidade com o pai. A princípio, Jules tem suas próprias questões para lidar, porém, aos poucos, essa amizade vai se transformando em um intenso interesse amoroso.",
+        "season": 1,
+        "episode_number": 1
+      }
+    ]
+}
+
+
+### DELETE SERIES ###
+
+DELETE {{baseUrl}}/series/1 HTTP/1.1
